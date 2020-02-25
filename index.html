@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="git.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="mainContainer">
+        <div id="searchcontainer">
+            <div id="east">
+                <span>GitHub</span>
+                <span>SEARCH</span>
+            </div>
+            <div id="west">
+                <div id="north">
+                    <div>
+                        <div class='checkboxContainer'>
+                            <input type="radio" class="searchOptions" name="searchOptions" id="repositories">
+                            <label for="repositories">repositories</label>
+                        </div>
+                        <div class='checkboxContainer'>
+                            <input type="radio" class="searchOptions" name="searchOptions" id="users">
+                            <label for="users">users</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class='checkboxContainer'>
+                            <input type="radio" class="searchOptions" name="searchOptions" id="topics">
+                            <label for="topics">topics</label>
+                        </div>
+                        <div class='checkboxContainer'>
+                            <input type="radio" class="searchOptions" name="searchOptions" id="issues">
+                            <label for="issues">issues</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="south">
+                        <button id="searchBtn" type="button">search</button>
+                        <input id="searchZone" type="text">
+                </div>
+            </div>
+        </div>
+        <div id="resultcontainer">
+            <ul id="resultList"></ul>
+        </div>
+    </div>
+
+    <script src="git.js"></script>
+</body>
+</html>
+    
