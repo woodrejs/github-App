@@ -2,11 +2,11 @@ $first: #2E364D;
 $secound: #0FBF4D;
 $third: #DADADA;
 $fourth: #434A73;
-*
-{
-  //border: 1px solid red;
+* { 
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 body
 {
     padding: 0;
