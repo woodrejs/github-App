@@ -3,11 +3,19 @@ window.onload=function(){
     const searchBtn = document.querySelector('#searchBtn');
     const searchZone = document.querySelector('#searchZone');
     const resultList = document.querySelector('#resultList');
+    const resultcontainer = document.querySelector('#resultcontainer');
     ////CHECKBOXES
     const repositories = document.querySelector('#repositories');
     const users = document.querySelector('#users');
     const topics = document.querySelector('#topics');
     const issues = document.querySelector('#issues');
+////SHOW INFO (NO RESULTS)
+    const showInfo = ()=>{
+        const info = document.createElement('span');
+        info.innerHTML = 'No results. Try again.';
+        info.classList.add('info');
+        resultcontainer.appendChild(info);
+    }
 ////RESULT OBJECT
     function ResultItem(obj,link,avatarLink=null,text=null,secoundText=null){
 
@@ -48,7 +56,7 @@ window.onload=function(){
 
         fetch(`${baseURL}${searchPhrase}`,{"headers" : headers})
         .then(resp => resp.json())
-        .then(resp=>callback(resp))
+        .then(resp => resp.total_count == 0 ? showInfo() : callback(resp))
         .catch(err=>console.log(err));
     }
 ////SEARCH ACTION
@@ -114,7 +122,6 @@ window.onload=function(){
     searchBtn.addEventListener('click',search);
     searchZone.addEventListener('keyup',(e)=>e.keyCode == 13 ? search(): false);
 ////RESULT CONTAINER SLIDE DOWN
-    const resultcontainer = document.querySelector('#resultcontainer');
     searchBtn.addEventListener('click',()=>{
         resultcontainer.style.transform = 'scale(1,1)';
     });
