@@ -32,7 +32,7 @@ body
 }
 #mainContainer
 {
-    width: 50vw;
+    width: 45vw;
     @include flex(column,stretch,stretch);
     position: fixed;
 }
@@ -40,7 +40,10 @@ body
 {
     @include flex(row,stretch,stretch);
     padding: 1rem;
-    background-color: $first;
+    background-image: url('./img/bck-01.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 200px;
     flex: 1;
 }
@@ -217,8 +220,4 @@ body
     {
         font-size: 15px;
     }
-    #mainContainer{
-        width: 60vw;
-    }
-    
 }

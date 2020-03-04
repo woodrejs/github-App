@@ -25,7 +25,7 @@ body {
 }
 
 #mainContainer {
-  width: 50vw;
+  width: 45vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,7 +57,10 @@ body {
       -ms-flex-align: stretch;
           align-items: stretch;
   padding: 1rem;
-  background-color: #2E364D;
+  background-image: url("./img/bck-01.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 200px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -305,9 +308,6 @@ body {
 @media (min-width: 801px) and (orientation: landscape) {
   html {
     font-size: 15px;
-  }
-  #mainContainer {
-    width: 60vw;
   }
 }
 /*# sourceMappingURL=git.css.map */
