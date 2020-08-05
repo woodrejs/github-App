@@ -25,10 +25,10 @@
                   type="radio"
                   class="searchOptions"
                   name="searchOptions"
-                  id="repositories"
+                  id="repos"
                   checked
                 />
-                <label for="repositories">repositories</label>
+                <label for="repos">repositories</label>
               </div>
               <div class="checkboxContainer">
                 <input
@@ -68,6 +68,18 @@
         </div>
       </div>
       <div id="resultcontainer">
+        <template id="template">
+          <li>
+            <a href="#">
+              <img src="#" alt="avatar_icon" />
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+        </template>
+        <template id="template_noResults">
+          <span class="info">No results. Try again!</span>
+        </template>
         <ul id="resultList"></ul>
       </div>
     </div>
